@@ -1,31 +1,15 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import JobListing from "@/components/jobListing";
-const jobApi = "http://localhost:8000/Jobs";
-function Page() {
-  const [Jobs, setJobs] = useState([]);
-  const [latestJobId, setLatestJobId] = useState(0);
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch(jobApi);
-      const Jobs = result.json().then((json) => {
-        console.log(json);
-        setJobs(json);
-      });
-    };
-    fetchData();
-  }, []);
+import JobListings from "@/components/jobListings";
+import React from "react";
 
+function page() {
   return (
     <div>
-      <h1 className="text-3xl">All Jobs</h1>
-      <ul className=" flex justify-center flex-wrap">
-        {Jobs.map((job) => (
-          <JobListing className="" key={job.id} job={job} />
-        ))}
-      </ul>
+      <h1 className="text-3xl text-center font-semibold text-blue-500 shadow-lg">
+        Browse Jobs
+      </h1>
+      <JobListings />
     </div>
   );
 }
 
-export default Page;
+export default page;

@@ -20,13 +20,18 @@ function Navbar() {
         </Link>
       </div>
       <div className="space-x-3 font-medium text-white">
-        <button>
-          <Link href="/allJobs" className="hover:text-gray-500">
+        <button className="p-2 bg-blue-800 hover:bg-blue-900 rounded-lg drop-shadow-2xl  ">
+          <Link href="/" className="">
+            HOME
+          </Link>
+        </button>
+        <button className="p-2 bg-blue-800 hover:bg-blue-900 rounded-lg drop-shadow-2xl  ">
+          <Link href="/allJobs" className="">
             JOBS
           </Link>
         </button>
-        <button>
-          <Link href="/addJob" className="hover:text-gray-500">
+        <button className="p-2 bg-blue-800 hover:bg-blue-900 rounded-lg drop-shadow-2xl  ">
+          <Link href="/addJob" className="">
             ADD
           </Link>
         </button>
