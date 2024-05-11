@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "json-server --watch assets/jobList.json --port 5000"
+    "dev": "concurrently \"npm run json-server\" \"next dev\"",
+    "json-server": "json-server --watch assets/jobList.json --port 8000"
   },
   "dependencies": {
+    "concurrently": "^8.2.2",
     "json-server": "^1.0.0-alpha.23",
     "next": "14.2.3",
     "react": "^18",
