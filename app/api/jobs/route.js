@@ -122,6 +122,6 @@ export default function handler(req, res) {
     res.status(200).json(jobsData);
   } else {
     res.setHeader("Allow", ["GET"]);
-    res.status(405).end(`Method ${req.method} jaa na lavde Not Allowed`);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
