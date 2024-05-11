@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import JobListing from "@/components/jobListing";
-const jobApi = "http://localhost:5000/Jobs";
+const jobApi = "http://localhost:8000/Jobs";
 function Page() {
   const [Jobs, setJobs] = useState([]);
   const [latestJobId, setLatestJobId] = useState(0);

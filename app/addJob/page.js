@@ -29,14 +29,14 @@ function Page() {
 
     try {
       // Fetch the current jobs to get the maximum ID
-      const jobsResponse = await fetch("http://localhost:5000/Jobs");
+      const jobsResponse = await fetch("http://localhost:8000/Jobs");
       const jobs = await jobsResponse.json();
       const maxId = jobs.reduce((max, job) => (job.id > max ? job.id : max), 0);
 
       // Increment the maximum ID by 1 for the new job
       const newJobId = maxId + 1;
 
-      const postResponse = await fetch("http://localhost:5000/Jobs", {
+      const postResponse = await fetch("http://localhost:8000/Jobs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -131,7 +131,7 @@ export default Page;
 //     event.preventDefault();
 
 //     try {
-//       const response = await fetch("http://localhost:5000/Jobs", {
+//       const response = await fetch("http://localhost:8000/Jobs", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
