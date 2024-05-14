@@ -8,6 +8,7 @@ function JobListings() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(jobApi);
+
       const Jobs = result.json().then((json) => {
         console.log(json);
         setJobs(json);
