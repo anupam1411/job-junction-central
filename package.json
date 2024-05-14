@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "build": "concurrently \"npm run json-server\" \"next build\"",
     "dev": "concurrently \"npm run json-server\" \"next dev\"",
     "json-server": "json-server --watch assets/jobList.json --port 8000"
   },
