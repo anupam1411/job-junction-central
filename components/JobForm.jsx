@@ -46,14 +46,25 @@ function JobFrom({ formData, onChange, onSubmit }) {
           <label className="block text-gray-700 text-sm font-bold mb-2">
             Remote Option:
           </label>
-          <input
+          <select
+            name="remoteOption"
+            value={formData.remoteOption}
+            onChange={onChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          >
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          {/* <input
             type="checkbox"
             name="remoteOption"
             checked={formData.remoteOption}
             onChange={onChange}
             className="mr-2 leading-tight"
-          />
-          <span className="text-sm">Yes, remote option available</span>
+          /> */}
+          <span className="text-sm">
+            {formData.remoteOption}, remote option available
+          </span>
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2">

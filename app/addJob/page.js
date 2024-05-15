@@ -9,7 +9,7 @@ function Page() {
     jobTitle: "",
     description: "",
     location: "",
-    remoteOption: false,
+    remoteOption: "____",
     jobType: "fulltime",
     salaryRange: "",
     skillsRequired: "",
@@ -31,7 +31,10 @@ function Page() {
       // Fetch the current jobs to get the maximum ID
       const jobsResponse = await fetch("http://localhost:8000/Jobs");
       const jobs = await jobsResponse.json();
-      const maxId = jobs.reduce((max, job) => (job.id > max ? job.id : max), 0);
+      const maxId = jobs.reduce(
+        (max, job) => Math.max(max, parseInt(job.id)),
+        0
+      );
 
       // Increment the maximum ID by 1 for the new job
       const newJobId = maxId + 1;

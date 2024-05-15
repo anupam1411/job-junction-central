@@ -1,7 +1,7 @@
 {
   "Jobs": [
     {
-      "id": 1,
+      "id": "1",
       "jobTitle": "Software Engineer",
       "description": "Develop and maintain software applications.",
       "location": "San Francisco, CA",
@@ -20,7 +20,7 @@
       "companyAddress": "123 Main St, San Francisco, CA"
     },
     {
-      "id": 2,
+      "id": "2",
       "jobTitle": "Marketing Specialist",
       "description": "Create and execute marketing campaigns.",
       "location": "New York, NY",
@@ -39,7 +39,7 @@
       "companyAddress": "456 Oak St, New York, NY"
     },
     {
-      "id": 3,
+      "id": "3",
       "jobTitle": "Data Analyst",
       "description": "Analyze and interpret data to drive business decisions.",
       "location": "Chicago, IL",
@@ -58,7 +58,7 @@
       "companyAddress": "789 Elm St, Chicago, IL"
     },
     {
-      "id": 4,
+      "id": "4",
       "jobTitle": "Graphic Designer",
       "description": "Create visual concepts and designs for various projects.",
       "location": "Los Angeles, CA",
@@ -77,7 +77,7 @@
       "companyAddress": "321 Pine St, Los Angeles, CA"
     },
     {
-      "id": 5,
+      "id": "5",
       "jobTitle": "Content Writer",
       "description": "Produce engaging and informative content for various platforms.",
       "location": "Austin, TX",
@@ -96,7 +96,7 @@
       "companyAddress": "567 Maple St, Austin, TX"
     },
     {
-      "id": 6,
+      "id": "6",
       "jobTitle": "Sales Representative",
       "description": "Sell products or services to potential customers.",
       "location": "Miami, FL",
@@ -116,41 +116,22 @@
     },
     {
       "id": 7,
-      "jobTitle": "https://anupam-deploys.netlify.app/",
-      "description": "dd",
+      "jobTitle": "Front End Web Developer",
+      "description": "xx",
       "location": "Mumbai, Maharashtra",
-      "remoteOption": false,
+      "remoteOption": "____",
       "jobType": "fulltime",
-      "salaryRange": "ff",
-      "skillsRequired": "f",
-      "experience": "f",
-      "education": "S",
-      "cgpaOrPercentage": "d",
-      "lastDateToApply": "2024-05-24",
+      "salaryRange": "8",
+      "skillsRequired": "xssc",
+      "experience": "100",
+      "education": "d",
+      "cgpaOrPercentage": "10",
+      "lastDateToApply": "2024-05-02",
       "contactEmail": "sagaranupam2@gmail.com",
       "contactPhone": "09175003239",
-      "companyName": "fixing numnering issue of json",
+      "companyName": "GuruKrupa ",
       "companyWebsite": "https://main--jobjunctioncentral.netlify.app/addJob",
-      "companyAddress": "B-503 Siddhivinayak heights, Bhabola-Chulna road, Kauls Heritage City, Near Mount Carmel School, Vasai Road West, 401201"
-    },
-    {
-      "id": 8,
-      "jobTitle": "https://anupam-deploys.netlify.app/",
-      "description": "s",
-      "location": "Mumbai, Maharashtra",
-      "remoteOption": false,
-      "jobType": "internship",
-      "salaryRange": "s",
-      "skillsRequired": "8",
-      "experience": "s",
-      "education": "S",
-      "cgpaOrPercentage": "S",
-      "lastDateToApply": "2024-05-08",
-      "contactEmail": "sagaranupam2@gmail.com",
-      "contactPhone": "09175003239",
-      "companyName": "2nd test",
-      "companyWebsite": "https://main--jobjunctioncentral.netlify.app/addJob",
-      "companyAddress": "B-503 Siddhivinayak heights, Bhabola-Chulna road, Kauls Heritage City, Near Mount Carmel School, Vasai Road West, 401201"
+      "companyAddress": "B-503 siddhivinayak heights, bhabola-chulna road, Near Mount Carmel School, Vasai Road West, 401202"
     }
   ]
 }
