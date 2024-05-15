@@ -46,7 +46,6 @@ function JobListing({ job }) {
         </button>
         <br />
         <br />
-        <Link href={`allJobs/${job.id}`}>READ MORE</Link>
       </li>
     </div>
   );
