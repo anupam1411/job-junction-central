@@ -15,7 +15,7 @@ function Navbar() {
               width={50}
               className="rounded-md"
             />
-            <div>JOB POINT</div>
+            <div>Career Compass🧭</div>
           </div>
         </Link>
       </div>
