@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import JobForm from "@/components/JobForm";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 function Page() {
-  const router = useRouter();
   const [formData, setFormData] = useState({
     jobTitle: "",
     description: "",
     location: "",
-    remoteOption: "____",
+    remoteOption: false,
     jobType: "fulltime",
     salaryRange: "",
     skillsRequired: "",
@@ -24,13 +24,15 @@ function Page() {
     companyAddress: "",
   });
 
+  const router = useRouter();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       // Fetch the current jobs to get the maximum ID
-      const jobsResponse = await fetch("http://localhost:8000/Jobs");
-      const jobs = await jobsResponse.json();
+      const jobsResponse = await axios.get("/api/jobs");
+      const jobs = jobsResponse.data;
       const maxId = jobs.reduce(
         (max, job) => Math.max(max, parseInt(job.id)),
         0
@@ -39,20 +41,16 @@ function Page() {
       // Increment the maximum ID by 1 for the new job
       const newJobId = maxId + 1;
 
-      const postResponse = await fetch("http://localhost:8000/Jobs", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...formData, id: newJobId }), // Include the new ID in the request body
-      });
+      const newJob = { ...formData, id: newJobId };
 
-      if (!postResponse.ok) {
+      // Post the new job
+      const postResponse = await axios.post("/api/jobs", newJob);
+
+      if (postResponse.status !== 201) {
         throw new Error("Failed to add job");
       }
 
       setFormData({
-        // Reset form data after successful submission
         jobTitle: "",
         description: "",
         location: "",
@@ -134,7 +132,7 @@ export default Page;
 //     event.preventDefault();
 
 //     try {
-//       const response = await fetch("http://localhost:8000/Jobs", {
+//       const response = await fetch("/api/jobs", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",

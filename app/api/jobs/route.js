@@ -1,4 +1,4 @@
-// pages/api/jobs.js
+import { NextResponse } from "next/server";
 
 const jobsData = [
   {
@@ -117,11 +117,11 @@ const jobsData = [
     companyAddress: "987 Cedar St, Miami, FL",
   },
 ];
-export default function handler(req, res) {
-  if (req.method === "GET") {
-    res.status(200).json(jobsData);
-  } else {
-    res.setHeader("Allow", ["GET"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
-  }
+export async function GET(request) {
+  return NextResponse.json(jobsData);
+}
+export async function POST(request) {
+  const newJob = await request.json();
+  jobsData.push(newJob);
+  return NextResponse.json(newJob, { status: 201 });
 }

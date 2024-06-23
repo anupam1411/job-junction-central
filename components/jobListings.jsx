@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import JobListing from "@/components/jobListing";
-const jobApi = "http://localhost:8000/Jobs";
+import Link from "next/link";
+import axios from "axios";
+
+const jobApi = "/api/jobs";
 function JobListings() {
   const [Jobs, setJobs] = useState([]);
   const [latestJobId, setLatestJobId] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetch(jobApi);
-
-      const Jobs = result.json().then((json) => {
-        console.log(json);
-        setJobs(json);
+      await axios.get(jobApi).then((res) => {
+        setJobs(res.data);
       });
     };
     fetchData();
@@ -21,7 +21,10 @@ function JobListings() {
     <div>
       <ul className=" flex justify-center flex-wrap">
         {Jobs.map((job) => (
-          <JobListing className="" key={job.id} job={job} />
+          <div key={job.id}>
+            <JobListing className="" key={job.id} job={job} />
+            <Link href={`/allJobs/${job.id}`}>Show More</Link>
+          </div>
         ))}
       </ul>
     </div>
