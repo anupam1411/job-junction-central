@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 
-function JobPage({ params }) {
+function Page({ params }) {
   const jobApi = "/api/jobs/";
   const [job, setJob] = useState(null);
 
@@ -94,8 +94,9 @@ function JobPage({ params }) {
           </div>
         </div>
       </div>
+      {params.jobID}
     </div>
   );
 }
 
-export default JobPage;
+export default Page;
