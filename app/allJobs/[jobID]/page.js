@@ -94,7 +94,6 @@ function Page({ params }) {
           </div>
         </div>
       </div>
-      {params.jobID}
     </div>
   );
 }
