@@ -125,3 +125,20 @@ export async function POST(request) {
   jobsData.push(newJob);
   return NextResponse.json(newJob, { status: 201 });
 }
+export async function DELETE(request) {
+  const { searchParams } = new URL(request.url);
+  const jobId = parseInt(searchParams.get("id"), 10);
+
+  const jobIndex = jobsData.findIndex((job) => job.id === jobId);
+
+  if (jobIndex === -1) {
+    return NextResponse.json({ message: "Job not found" }, { status: 404 });
+  }
+
+  jobsData.splice(jobIndex, 1);
+
+  return NextResponse.json(
+    { message: "Job deleted successfully" },
+    { status: 200 }
+  );
+}
