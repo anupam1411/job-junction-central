@@ -1,6 +1,10 @@
 import React from "react";
 
 function JobForm({ formData, onChange, onSubmit }) {
+  const isEditing = !!formData.jobTitle;
+  const handleCancelEdit = () => {
+    setIsEditing(false); // Cancel editing and switch back to viewing mode
+  };
   return (
     <div className="max-w-7xl mx-auto p-4">
       <form
@@ -223,7 +227,7 @@ function JobForm({ formData, onChange, onSubmit }) {
             type="submit"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            Submit
+            {isEditing ? "Update Job" : "Add Job"}
           </button>
         </div>
       </form>

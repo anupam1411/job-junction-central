@@ -6,7 +6,7 @@ function JobListing({ job }) {
 
   return (
     <div className="m-1">
-      <li
+      <div
         key={job.id}
         className="m-2 sm:w-[30vw]  w-[85vw] h-fit min-h-[30vh] text-sm bg-gray-200 p-4 rounded-md"
       >
@@ -40,7 +40,7 @@ function JobListing({ job }) {
         </button>
         <br />
         <br />
-      </li>
+      </div>
     </div>
   );
 }

@@ -142,3 +142,29 @@ export async function DELETE(request) {
     { status: 200 }
   );
 }
+
+// routes.js
+
+export async function PUT(request) {
+  const { searchParams } = new URL(request.url);
+  const jobId = parseInt(searchParams.get("id"), 10);
+  const updatedJob = await request.json();
+
+  const jobIndex = jobsData.findIndex((job) => job.id === jobId);
+
+  if (jobIndex === -1) {
+    return NextResponse.json({ message: "Job not found" }, { status: 404 });
+  }
+
+  // Update the job in the jobsData array
+  jobsData[jobIndex] = {
+    ...jobsData[jobIndex],
+    ...updatedJob,
+    id: jobId, // Ensure the ID remains unchanged
+  };
+
+  return NextResponse.json({
+    message: "Job updated successfully",
+    job: jobsData[jobIndex],
+  });
+}

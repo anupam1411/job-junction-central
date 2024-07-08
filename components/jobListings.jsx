@@ -18,15 +18,18 @@ function JobListings() {
   }, []);
 
   return (
-    <div>
-      <ul className=" flex justify-center flex-wrap">
-        {Jobs.map((job) => (
-          <div key={job.id}>
-            <JobListing className="" key={job.id} job={job} />
-            <Link href={`/allJobs/${job.id}`}>Show More</Link>
-          </div>
-        ))}
-      </ul>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {Jobs.map((job) => (
+        <div key={job.id} className="border border-gray-200 rounded-md p-4">
+          <JobListing job={job} />
+          <Link
+            href={`/allJobs/${job.id}`}
+            className="text-blue-500 hover:text-blue-700 mt-2"
+          >
+            Show More
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }
