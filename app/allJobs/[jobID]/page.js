@@ -60,10 +60,12 @@ function Page({ params }) {
             companyWebsite: jobData.companyWebsite,
             companyAddress: jobData.companyAddress,
           });
+        } else {
+          setJobNotFound(true);
         }
       } catch (err) {
         console.error("Error fetching job data:", err);
-        setError("Failed to fetch job data. Please try again.");
+        setError("Please try again.");
       }
     };
     fetchData();

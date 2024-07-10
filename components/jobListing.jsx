@@ -35,7 +35,10 @@ function JobListing({ job }) {
             </p>
           </div>
         )}
-        <button onClick={() => setShowMore(!showMore)}>
+        <button
+          className="bg-blue-300 hover:bg-blue-600 text-black hover:text-white font-bold py-2 px-4 rounded-md"
+          onClick={() => setShowMore(!showMore)}
+        >
           {showMore ? "Show Less" : "Show More"}
         </button>
         <br />
