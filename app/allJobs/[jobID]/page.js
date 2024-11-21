@@ -132,48 +132,67 @@ function Page({ params }) {
           <p className="text-gray-600 mb-4">{job.description}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <p className="font-semibold">Job Type:</p>
+              <p className="font-bold text-lg">Job Type:</p>
               <p>{job.jobType}</p>
             </div>
             <div>
-              <p className="font-semibold">Location:</p>
+              <p className="font-bold text-lg">Location:</p>
               <p>{job.location}</p>
             </div>
             <div>
-              <p className="font-semibold">Salary Range:</p>
+              <p className="font-bold text-lg">Salary Range:</p>
               <p>{job.salaryRange}</p>
             </div>
             <div>
-              <p className="font-semibold">Experience:</p>
+              <p className="font-bold text-lg">Experience:</p>
               <p>{job.experience}</p>
             </div>
             <div>
-              <p className="font-semibold">Skills Required:</p>
+              <p className="font-bold text-lg">Skills Required:</p>
               <p>{job.skillsRequired}</p>
             </div>
             <div>
-              <p className="font-semibold">Education:</p>
+              <p className="font-bold text-lg">Education:</p>
               <p>{job.education}</p>
             </div>
             <div>
-              <p className="font-semibold">Contact Email:</p>
+              <p className="font-bold text-lg">
+                Minimum CGPA Or Percentage Requirement:
+              </p>
+              <p>{job.cgpaOrPercentage}</p>
+            </div>
+            <div>
+              <p className="font-bold text-lg">Contact Email:</p>
               <p>{job.contactEmail}</p>
             </div>
             <div>
-              <p className="font-semibold">Contact Phone:</p>
+              <p className="font-bold text-lg">Contact Phone:</p>
               <p>{job.contactPhone}</p>
             </div>
             <div>
-              <p className="font-semibold">Company Name:</p>
+              <p className="font-bold text-lg">Company Name:</p>
               <p>{job.companyName}</p>
             </div>
             <div>
-              <p className="font-semibold">Remote Option:</p>
+              <p className="font-bold text-lg">Remote Option:</p>
               <p>{job.remoteOption ? "Yes" : "No"}</p>
             </div>
             <div>
-              <p className="font-semibold">Last Date to Apply:</p>
+              <p className="font-bold text-lg">Last Date to Apply:</p>
               <p>{job.lastDateToApply}</p>
+            </div>
+            <div>
+              <p className="font-bold text-lg">Company Website:</p>
+              <Link
+                href={job.companyWebsite}
+                className="text-teal-600 hover:underline"
+              >
+                {job.companyWebsite}
+              </Link>
+            </div>
+            <div>
+              <p className="font-bold text-lg">Company Address:</p>
+              <p>{job.companyAddress}</p>
             </div>
             <div className="space-x-3 text-white text-sm font-semibold">
               <button
@@ -188,19 +207,6 @@ function Page({ params }) {
               >
                 EDIT JOB
               </button>
-            </div>
-            <div>
-              <p className="font-semibold">Company Website:</p>
-              <Link
-                href={job.companyWebsite}
-                className="text-teal-600 hover:underline"
-              >
-                {job.companyWebsite}
-              </Link>
-            </div>
-            <div>
-              <p className="font-semibold">Company Address:</p>
-              <p>{job.companyAddress}</p>
             </div>
           </div>
         </div>
