@@ -5,7 +5,10 @@ import JobListings from "@/components/jobListings";
 export default function Home() {
   return (
     <div className="h-full flex flex-col">
-      <Hero title="Welcome to JobHub!" subtitle="Find your dream job now!" />
+      <Hero
+        title="Welcome to My JobHub!"
+        subtitle="Find your dream job on this portal!"
+      />
       <main className=" mt-8">
         <JobListings />
       </main>

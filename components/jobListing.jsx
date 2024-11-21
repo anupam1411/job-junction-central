@@ -29,14 +29,14 @@ function JobListing({ job }) {
             <p>Last Date to Apply: {job.lastDateToApply}</p>
             <p>
               Company Website:
-              <Link className="text-blue-600" href={job.companyWebsite}>
+              <Link className="text-teal-600" href={job.companyWebsite}>
                 {job.companyWebsite}
               </Link>
             </p>
           </div>
         )}
         <button
-          className="bg-blue-300 hover:bg-blue-600 text-black hover:text-white font-bold py-2 px-4 rounded-md"
+          className="bg-teal-300 hover:bg-teal-600 text-black hover:text-white font-bold py-2 px-4 rounded-md"
           onClick={() => setShowMore(!showMore)}
         >
           {showMore ? "Show Less" : "Show More"}

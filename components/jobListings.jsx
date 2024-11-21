@@ -24,7 +24,7 @@ function JobListings() {
           <div className="flex justify-center  mt-2">
             <Link
               href={`/allJobs/${job.id}`}
-              className="text-blue-500 hover:text-blue-700  "
+              className="text-teal-500 hover:text-teal-700  "
             >
               Full Description <OpenInNewIcon fontSize="small" />
             </Link>

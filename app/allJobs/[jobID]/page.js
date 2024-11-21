@@ -125,7 +125,7 @@ function Page({ params }) {
         <div key={params.jobID} className="p-4">
           <Link
             href={`allJobs/${params.jobID}`}
-            className="text-2xl font-bold text-blue-600 hover:underline"
+            className="text-2xl font-bold text-teal-600 hover:underline"
           >
             {job.jobTitle}
           </Link>
@@ -178,13 +178,13 @@ function Page({ params }) {
             <div className="space-x-3 text-white text-sm font-semibold">
               <button
                 onClick={handleDelete}
-                className="bg-blue-500 rounded drop-shadow-lg p-2 hover:bg-blue-600"
+                className="bg-teal-500 rounded drop-shadow-lg p-2 hover:bg-teal-600"
               >
                 DELETE JOB
               </button>
               <button
                 onClick={() => setIsEditing(true)}
-                className="bg-blue-500 rounded drop-shadow-lg p-2  hover:bg-blue-600"
+                className="bg-teal-500 rounded drop-shadow-lg p-2  hover:bg-teal-600"
               >
                 EDIT JOB
               </button>
@@ -193,7 +193,7 @@ function Page({ params }) {
               <p className="font-semibold">Company Website:</p>
               <Link
                 href={job.companyWebsite}
-                className="text-blue-600 hover:underline"
+                className="text-teal-600 hover:underline"
               >
                 {job.companyWebsite}
               </Link>

@@ -11,7 +11,7 @@ function JobForm({ formData, onChange, onSubmit }) {
         onSubmit={onSubmit}
         className="grid grid-cols-1 lg:grid-cols-3 gap-4"
       >
-        <div className="bg-blue-200 p-4 rounded">
+        <div className="bg-teal-200 p-4 rounded">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Job Title:
@@ -95,7 +95,7 @@ function JobForm({ formData, onChange, onSubmit }) {
           </div>
         </div>
 
-        <div className="bg-blue-200 p-4 rounded">
+        <div className="bg-teal-200 p-4 rounded">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Job Type:
@@ -185,7 +185,7 @@ function JobForm({ formData, onChange, onSubmit }) {
           </div>
         </div>
 
-        <div className="bg-blue-200 p-4 rounded">
+        <div className="bg-teal-200 p-4 rounded">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Company Name:
@@ -225,7 +225,7 @@ function JobForm({ formData, onChange, onSubmit }) {
         <div className="lg:col-span-3 flex items-center justify-center mt-4">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             {isEditing ? "Update Job" : "Add Job"}
           </button>

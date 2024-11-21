@@ -88,7 +88,6 @@ function Page() {
 
   return (
     <div>
-      <h2>Add Job</h2>
       <JobForm
         formData={formData}
         onChange={handleChange}

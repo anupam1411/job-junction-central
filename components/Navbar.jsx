@@ -8,12 +8,12 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between bg-gray-900 p-4">
+    <nav className="flex items-center justify-between bg-[#5a1437] p-4">
       <div className="flex items-center">
         <Link href="/">
           <div className="mr-4 text-white font-bold flex justify-center items-center">
             <Image
-              src="/logo.png"
+              src="/logo2-ezgif.com-crop.gif"
               alt="JOB POINT"
               height={50}
               width={50}
@@ -25,17 +25,17 @@ function Navbar() {
       </div>
       <div className="hidden md:flex space-x-3 text-white font-bold">
         <Link href="/" className="">
-          <button className="p-2 bg-blue-800 hover:bg-blue-900 rounded-lg drop-shadow-2xl">
+          <button className="p-2 bg-[#a96d2d] hover:bg-[#583b1b] rounded-lg drop-shadow-2xl">
             HOME
           </button>
         </Link>
         <Link href="/allJobs" className="">
-          <button className="p-2 bg-blue-800 hover:bg-blue-900 rounded-lg drop-shadow-2xl">
+          <button className="p-2 bg-[#a96d2d] hover:bg-[#583b1b] rounded-lg drop-shadow-2xl">
             JOBS
           </button>
         </Link>
         <Link href="/addJob" className="">
-          <button className="p-2 bg-blue-800 hover:bg-blue-900 rounded-lg drop-shadow-2xl">
+          <button className="p-2 bg-[#a96d2d] hover:bg-[#583b1b] rounded-lg drop-shadow-2xl">
             ADD
           </button>
         </Link>
