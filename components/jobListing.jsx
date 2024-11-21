@@ -13,7 +13,8 @@ function JobListing({ job }) {
         <Link href={`allJobs/${job.id}`} job={job}>
           <p className="text-gray-800 font-semibold">{job.jobTitle}</p>
         </Link>
-        <p>{job.id}</p> <p className="text-gray-600">{job.description}</p>
+        <p>Job ID: {job.id}</p>{" "}
+        <p className="text-gray-600">{job.description}</p>
         <p className="mr-4">Job Type: {job.jobType}</p>
         <div className="flex flex-wrap mt-2">
           <p>Company Name: {job.companyName}</p>
