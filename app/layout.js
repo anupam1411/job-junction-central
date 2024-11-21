@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Career Compass🧭",
   description:
-    "A project to Learn CRUD operations, props, dynamic routes and much more in Nextjs",
+    "A project to Learn CRUD operations, props, dynamic routes and much more in Next.Js",
 };
 
 export default function RootLayout({ children }) {
