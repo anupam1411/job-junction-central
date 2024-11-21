@@ -120,6 +120,7 @@ function Page({ params }) {
             setFormData({ ...formData, [e.target.name]: e.target.value })
           }
           onSubmit={handleSubmit}
+          isEditing={true}
         />
       ) : (
         <div key={params.jobID} className="p-4">

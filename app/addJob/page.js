@@ -92,6 +92,7 @@ function Page() {
         formData={formData}
         onChange={handleChange}
         onSubmit={handleSubmit}
+        isEditing={false}
       />
     </div>
   );

@@ -1,10 +1,10 @@
 import React from "react";
 
-function JobForm({ formData, onChange, onSubmit }) {
-  const isEditing = !!formData.jobTitle;
-  const handleCancelEdit = () => {
-    setIsEditing(false); // Cancel editing and switch back to viewing mode
-  };
+function JobForm({ formData, onChange, onSubmit, isEditing }) {
+  // const isEditing = !!formData.jobTitle;
+  // const handleCancelEdit = () => {
+  //   setIsEditing(false); // Cancel editing and switch back to viewing mode
+  // };
   return (
     <div className="max-w-7xl mx-auto p-4">
       <form
